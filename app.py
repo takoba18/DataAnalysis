@@ -11,7 +11,7 @@ st.write("""
 st.sidebar.header("What would you like to display")
 option = st.sidebar.selectbox(
     ' Choose ',
-    ('Mobile', 'Web', 'Male', 'Female', 'Female vs Male', 'Education', 'Political Views', 'Race', 'Religion',
+    ('Mobile', 'Web', 'Male', 'Female', 'Gender', 'Education', 'Political Views', 'Race', 'Religion',
      'Sexual orientation', 'PC or Mac')
 )
 data = pd.read_csv('WhatsgoodlyData-10.csv')
@@ -163,7 +163,7 @@ if option == "Education":
                       index=chart_grad.index)
     df.plot(kind="bar")
     st.bar_chart(df)
-if option == "Female vs Male":
+if option == "Gender":
     df = pd.DataFrame({"Male": chart_male.values,
                        "Female": chart_female.values},
                       index=chart_female.index)
